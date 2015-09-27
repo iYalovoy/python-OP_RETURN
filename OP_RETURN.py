@@ -441,7 +441,7 @@ def OP_RETURN_bitcoin_cmd(command, testnet, *args): # more params are read from 
 		password=OP_RETURN_BITCOIN_PASSWORD
 		
 		if not (len(port) and len(user) and len(password)):
-			conf_lines=open(os.path.expanduser('~')+'/.bitcoin/bitcoin.conf').readlines()
+			conf_lines=open(os.path.expanduser('~')+'/Library/Application Support/Bitcoin/bitcoin.conf').readlines()
 			
 			for conf_line in conf_lines:
 				parts=conf_line.strip().split('=', 1) # up to 2 parts
